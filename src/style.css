@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------CARACTERÍSTACAS QUE AFECTAN A TODO EL BODY----------------*/
+ 
+body {
+    background: linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%);
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 1.6em; 
+}
+
+/*--------------------CARACTERÍSTICAS DEL HEADER----------------------*/
+
+a:link,
+a:visited {
+  color: #5D6063;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 50px;
+  background: rgb(33, 182, 241);
+  font-size: 20px;
+  font-weight: bold 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.menu {
+    margin-top: 15px;
+}
+  
+.menu > li {
+    display: inline;
+    margin-right: 50px;
+}
+
+.logo .user{
+    width: 50px;
+    height: 50px;
+    font: 20px;
+    line-height: 20px;
+    color: blanchedalmond;
+}
+
+.user button{
+    height: 80px;
+    width: 80px;
+    border-style:none;
+    background: rgb(39, 151, 196);    
+    border: 0;
+    border-radius: 36px;
+    padding: 0 20px 3px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: static;
+}
+
+.user button:hover{
+    background-color: rgb(22, 77, 99);     
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    position: static;
+}
+/*-----------------caracaterísticas que afectan al main------------------*/
+
+main{
+    /* background: linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%); */
+    height: 100%;
+}
+
+/*------------CARACTERÍSTICAS QUE AFECTAN SOLO A LAS TARJETAS---------------*/
+
+.boxCard{
+    width: 1000px;
+    max-width: 800px;
+    height: 550px;
+    padding: 40px 20px;
+    border: 50px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*-------------ESTILO DE TRASERO Y DELANTERO DE LA TARJETA----------------*/
+
+.card{
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    color: aliceblue;
+}
+
+.cardFront {
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    box-shadow: 0 10px 10px 0 rgb(134, 129, 129);
+    width: 100%;
+    background: rgb(230, 169, 78);
+    /* background: url(https://github.com/falconmasters/formulario-tarjeta-credito-3d/blob/master/img/bg-tarjeta/bg-tarjeta-02.jpg?raw=true); */
+    background-size:cover;
+}
+
+.cardBack {
+    padding: 15px 0 15px 0;    
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0 10px 10px 0 rgb(134, 129, 129);
+    background: rgb(209, 93, 47);
+    /* background: url(https://github.com/falconmasters/formulario-tarjeta-credito-3d/blob/master/img/bg-tarjeta/bg-tarjeta-02.jpg?raw=true); */
+    background-size:cover;
+}
+
+/*---------------CARCATERÍSTICAS QUE AFECTAN LA POSICIÓN DE LAS TARJETAS---------------*/
+.cardBackPosition {
+    position: relative;
+    left: 150px;
+    top: 90px;
+    z-index: 1;
+}
+
+.cardFrontPosition{
+    position: relative;
+    bottom: 170px;
+    right: 150px;
+    z-index: 3;
+}
+
+/*---------DATOS DE LAS TARJETAS-----------*/
+.datoBack{
+    margin:  0 40px 0 40px;
+    padding: 0;
+    border: 10px 0 0 0;
+    font-size: relative;
+    justify-content: right;
+}
+
+.contenidoCard1{
+    margin: 5px;
+}
+
+.contenidoCard2{ 
+    height: 250px;
+    
+}
+
+/*------------Imagenes y logos de las tarjetas------------*/
+
+.card > div {
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10 10px 0 rgba(90, 116, 148, 0.3);
+
+}
+
+.logoCard {
+    min-height: 50px;
+    text-align: right;
+}
+
+.imagVisa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 100px;
+    text-align: right;
+}
+
+.imagChip {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 80px;
+    text-align: left;
+}
+
+/*----elementos presentes en la parte trasera de la tarjeta----*/
+.bar{
+    height: 60px;
+    width: 100%;
+    padding: 0;
+    background:rgb(22, 22, 22);
+    display: flex;
+}
+
+.propFirma{
+    justify-content: right;
+    color: azure;
+    width: 100%;
+    display: flex;
+    font-size: 10px;
+}
+
+.firma{
+    height: 40px;
+    padding: 0;
+    background: repeating-linear-gradient(azure 2px, rgb(200, 207, 207) 7px, rgb(19, 24, 24) 2px, rgb(26, 134, 134) 5%);
+    display: flex;
+}
+
+.contentCvv{
+    height: 40px;    
+}
+
+.cvvPosition{
+    display: inline;
+    justify-content: right;
+    display: flex;
+    
+}
+
+.cvvCard{
+    color: azure;
+    justify-content: right;    
+    font-size: 20px;
+    
+}
+
+.boxCvv{
+    color: azure;
+    justify-content: right;  
+    font-size: 18px;  
+    
+}
+
+.cvvPosition .boxCvv{
+    background: #FFFF;
+    height: 22px;
+    width: 60px;
+    color: black;
+    padding: 5px 5px 10px 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.cvvPosition .cvvCard{
+    margin: 0 10px 0 0;
+}
+
+
+.leyenda{
+    font-size: 8px;
+    line-height: 60%;
+    text-transform: uppercase;    
+}
+
+/*------------Carcaterísticas de las letras de las tarjetas-------------*/
+.label{
+    color: #FFFF;
+    font-size: 12px;
+}
+
+.infCard{
+    color: #FFFF;
+    font-size: 20px;     
+}
+
+.labelBack {
+    text-align: right;
+    font-size: 11px
+}
+
+.numbCvv {
+    text-align: right;
+}
+
+/*------------------------CARACTERÍSTICAS QUE AFECTAN AL FORMULARIO---------------------*/
+
+.boxForm {
+    z-index: 15;
+    position: relative;
+    background: #FFFFFF;
+    width: 700px;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 100px auto 100px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px 0px rgb(185, 182, 182);
+}
+
+.formPanel {   
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.formHeader {
+    margin: 0 0 40px;
+}
+
+.formHeader h1 {
+    padding: 4px 0;
+    color: #4285F4;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* .formContent {
+} */
+
+
+.formGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 20px;
+}
+
+.formGroup label {
+    display: block;
+    margin: 0 0 10px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.formGroup input {
+    outline: none;
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    transition: 0.3s ease;
+}
+
+.formGroup .bntForm {
+    outline: none;    
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    padding: 12px 20px;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.formGroup #clean{
+    background-color: rgb(194, 79, 79);
+}
+
+.formGroup #validateBtn{
+    background-color: rgb(41, 189, 49);
+}
+
+.formGroup #clean:hover {
+    background-color: rgb(190, 12, 12);    
+}
+
+.formGroup #validateBtn:hover {
+    background-color: rgb(16, 104, 16);    
+}
+/*----------------CARACTERÍSTICAS QUE AFECTAN EL FOOTER------------------*/
+.footer{
+    padding: 20px;
+    width: auto;
+    height: 150px;
+    background: rgb(33, 182, 241);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgb(236, 228, 228);
+    vertical-align: middle;
+    font-size: 18px;
+    position: static;
+    flex-direction: column;    
+}
+
+/*-----------------------------------------------------------*/
+  

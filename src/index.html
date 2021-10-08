@@ -3,12 +3,131 @@
   <head>
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+
+    <div class= "header">
+      <div class="logo">
+
+      </div>
+      <ul class="menu">
+        <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">INICIO</a></li>
+        <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">ACCESORIOS</a></li>
+        <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">AYUDA</a></li>
+        <li><i class="fa fa-search" style="font-size:40px"></i></li>
+        <li><i class="fa fa-shopping-bag" style="font-size:40px; color:rgb(255, 255, 255)"></i></li>
+                
+      </ul>
+      <div class="user">
+        <button style="font-size:48px">
+          <i class="fa fa-user-o" style="font-size:50px"></i>          
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <!--- contenedor de tarjeta --->
+        <div class="boxCard">
+          <section class="card" id="card">
+  
+              <div class="cardBackPosition">
+                <div class="cardBack"> <!-- esto es la parte trasera-->
+                  <div class="contenidoCard2">
+                    <div class="bar"></div><br>      
+                    <div class="datoBack">
+                      <p class="propFirma">Firma Autorizada</p>                                               
+                      <div class="firma"></div><br>                                   
+                      
+                      <div class="contentCvv" id="cvv">                   
+                        <div class="cvvPosition">
+                          <p class="cvvCard">CVV </p>
+                          <p class="boxCvv">***</p>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="leyenda">Esta tarjeta es propiedad del banco u se deberá ser devuelta cunado este lo solicite. 
+                      Es intransferible <br> y su uso regige las estipulaciones del contrato firmado con el titular y el Banco.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="cardFrontPosition">
+                <div class="cardFront"> <!-- esto es la delantera-->
+    
+                  <div class="logoCard">
+                    <img src="logo/visa.png" class="imagVisa">
+                  </div>
+                  <img src="logo/chip.png" class="imagChip"><br>
+                  
+                  <div class="contenidoCard1">
+                    <div class="infCardFront"> 
+                      <p class="label">Número Tarjeta</p>
+                      <p class="infCard" id="numberCard" ># # # #  # # # #  # # # #  # # # #</p>
+                    </div>
+                    <div class="dato">
+                      <p class="label">Nombre de la Tarjeta</p>
+                      <p class="infCard" id="nameCard">Marielena Aizaga</p>
+                    </div>
+                    <div class="dato">
+                      <p class="label">Fecha de Vencimiento</p>
+                      <p class="infCard" id="dateCard">MM/AA</p>
+                    </div>
+                  </div>
+      
+                </div>
+              </div>                                        
+          </section>
+        </div>
+
+        <!--- contenedor del Formulario--->
+        <div class="boxForm">
+          
+          <div class="formPanel">
+            <div class="formHeader">
+              <h1>Datos de la Tarjeta</h1><br>
+            </div>
+            <div class="formContent">
+              <form action="" id="formToCard" class="formToCard" >
+                <div class="formGroup">
+                  <label for="nameForm">Nombre de la Tarjeta</label>
+                  <input id="nameForm" type="text" name="nameForm" class="nameForm" autocomplete="off" required="required"/>
+                </div>
+                <div class="formGroup">
+                  <label for="numbForm">Número de la Tarjeta</label>
+                  <input id="numbForm" type="text" name="numbForm" class="numbForm" maxlength="16" autocomplete="off" required="required"/>
+                </div>
+                <div class="formGroup">
+                  <label for="dateForm">Fecha de Vencimiento</label>
+                  <input id="dateForm" type="text" name="dateForm" class="dateForm" required="required"/>
+                </div>
+                <div class="formGroup">
+                  <label for="codeCvvForm">Código de Verificación</label>
+                  <input id="codeCvvForm" type="text" name="codeCvvForm" required="required"/>
+                </div>
+                
+                <div class="formGroup">
+                  <br><button type="submit" class="bntForm" id="clean">Limpiar todos los campos</button>
+                </div>
+                <div class="formGroup">
+                  <br><button type="submit" class="bntForm" id="validateBtn">Validar Pago</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>        
+
+      </main>
+
+    <footer class="footer">
+      <p>Privacy Policy | Cookie Policy | Do Not Sell My Personal Information | Terms</p>
+      <p>Desarrollado por Maizaga© 2021. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
+
