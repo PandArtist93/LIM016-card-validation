@@ -8,26 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
 
-    <div class= "header">
-      <div class="logo">
-
+  <body>    
+    
+    <header>
+      <div class= "header">
+        <div class="logo">
+  
+        </div>
+        <ul class="menu">
+          <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">INICIO</a></li>
+          <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">ACCESORIOS</a></li>
+          <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">AYUDA</a></li>
+          <li><i class="fa fa-search" style="font-size:40px"></i></li>
+          <li><i class="fa fa-shopping-bag" style="font-size:40px; color:rgb(255, 255, 255)"></i></li>                  
+        </ul>
+        <div class="user">
+          <button style="font-size:48px">
+            <i class="fa fa-user-o" style="font-size:50px"></i>          
+          </button>
+        </div>
       </div>
-      <ul class="menu">
-        <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">INICIO</a></li>
-        <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">ACCESORIOS</a></li>
-        <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">AYUDA</a></li>
-        <li><i class="fa fa-search" style="font-size:40px"></i></li>
-        <li><i class="fa fa-shopping-bag" style="font-size:40px; color:rgb(255, 255, 255)"></i></li>
-                
-      </ul>
-      <div class="user">
-        <button style="font-size:48px">
-          <i class="fa fa-user-o" style="font-size:50px"></i>          
-        </button>
-      </div>
-    </div>
+    </header>    
 
     <main>
       <!--- contenedor de tarjeta --->
@@ -45,7 +47,7 @@
                       <div class="contentCvv" id="cvv">                   
                         <div class="cvvPosition">
                           <p class="cvvCard">CVV </p>
-                          <p class="boxCvv">***</p>
+                          <p class="boxCvv" id= "cvvCard">***</p>
                         </div>
                       </div>
                     </div>
@@ -66,15 +68,22 @@
                   <div class="contenidoCard1">
                     <div class="infCardFront"> 
                       <p class="label">Número Tarjeta</p>
-                      <p class="infCard" id="numberCard" ># # # #  # # # #  # # # #  # # # #</p>
+                      <p class="infCard" id="numberCard" >**** **** **** **** </p>
                     </div>
                     <div class="dato">
                       <p class="label">Nombre de la Tarjeta</p>
-                      <p class="infCard" id="nameCard">Marielena Aizaga</p>
+                      <p class="infCard" id="nameCard">************ ************</p>
                     </div>
                     <div class="dato">
                       <p class="label">Fecha de Vencimiento</p>
-                      <p class="infCard" id="dateCard">MM/AA</p>
+                      <div clase= "flexbox">
+                        <div>
+                          <p class="infCard" id="dateCardMonth">**</p>
+                        </div>
+                        <div>
+                          <p class="infCard" id="dateCardYear">**</p>
+                        </div>
+                      </div>                      
                     </div>
                   </div>
       
@@ -94,19 +103,26 @@
               <form action="" id="formToCard" class="formToCard" >
                 <div class="formGroup">
                   <label for="nameForm">Nombre de la Tarjeta</label>
-                  <input id="nameForm" type="text" name="nameForm" class="nameForm" autocomplete="off" required="required"/>
+                  <input id="nameForm" type="text" name="nameForm" class="nameForm" maxlength="26" value="" autocomplete="off" required="required"/>
                 </div>
                 <div class="formGroup">
                   <label for="numbForm">Número de la Tarjeta</label>
                   <input id="numbForm" type="text" name="numbForm" class="numbForm" maxlength="16" autocomplete="off" required="required"/>
                 </div>
                 <div class="formGroup">
-                  <label for="dateForm">Fecha de Vencimiento</label>
-                  <input id="dateForm" type="text" name="dateForm" class="dateForm" required="required"/>
+                  <label for="dateForm">Fecha de Vencimiento</label><br>
+                  <div>
+                    <label for="">Mes</label>
+                    <input id="dateFormMonth" type="text" name="dateForm" maxlength="2"class="dateForm" required="required"/>
+                  </div><br>
+                  <div>
+                    <label for="">Año</label>
+                    <input id="dateFormYear" type="text" name="dateForm" maxlength="4" class="dateForm" required="required"/>
+                  </div>                  
                 </div>
                 <div class="formGroup">
                   <label for="codeCvvForm">Código de Verificación</label>
-                  <input id="codeCvvForm" type="text" name="codeCvvForm" required="required"/>
+                  <input id="codeCvvForm" type="text" name="codeCvvForm" maxlength="3" required="required"/>
                 </div>
                 
                 <div class="formGroup">
