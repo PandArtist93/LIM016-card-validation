@@ -38,6 +38,29 @@ a:hover {
   color: #FFFFFF;
 }
 
+.menu{
+    justify-content: space-between;
+    width: 750px;
+}
+
+/* .search{
+    text-transform: uppercase;
+    display: flex;
+    background: rgba(0, 0, 0, 0.1);
+    width: 20%;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    transition: 0.3s ease;
+    
+}
+ */
 .menu {
     margin-top: 15px;
 }
@@ -84,15 +107,21 @@ main{
     height: 100%;
 }
 
+/*------------CARACTERÍSTICAS QUE AFECTAN TARJETAS Y FORMULARIO---------------*/
+
+.gigantBox{
+    position: relative;
+}
+
 /*------------CARACTERÍSTICAS QUE AFECTAN SOLO A LAS TARJETAS---------------*/
 
-.boxCard{
+.boxCard{    
     width: 1000px;
-    max-width: 800px;
+    max-width: 900px;
     height: 550px;
     padding: 40px 20px;
     border: 50px;
-    margin: auto;
+    margin: auto;   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,7 +130,7 @@ main{
 /*-------------ESTILO DE TRASERO Y DELANTERO DE LA TARJETA----------------*/
 
 .card{
-    width: 100%;
+    width: 800;
     max-width: 500px;
     height: 100%;
     position: relative;
@@ -110,25 +139,31 @@ main{
 }
 
 .cardFront {
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     border-radius: 15px;
-    min-height: 315px;
+    max-height: 315px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
     box-shadow: 0 10px 10px 0 rgb(134, 129, 129);
     width: 100%;
+    text-transform: uppercase;
     background-image: linear-gradient(rgb(9, 7, 121), rgb(90, 82, 202));
     /* background: rgb(230, 169, 78); */
     /* background: url(https://github.com/falconmasters/formulario-tarjeta-credito-3d/blob/master/img/bg-tarjeta/bg-tarjeta-02.jpg?raw=true); */
-    background-size:cover;
+    /* background-size:cover; */
+}
+
+.cardFront:hover{
+    box-shadow: 1px 2px 2px 2px rgb(134, 129, 129); 
 }
 
 .cardBack {
     padding: 15px 0 15px 0;    
     border-radius: 15px;
-    min-height: 315px;
+    max-height: 315px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -136,9 +171,12 @@ main{
     background-image: linear-gradient(rgb(117, 78, 189), rgb(78, 161, 238));
     /* background: rgb(209, 93, 47); */
     /* background: url(https://github.com/falconmasters/formulario-tarjeta-credito-3d/blob/master/img/bg-tarjeta/bg-tarjeta-02.jpg?raw=true); */
-    background-size:cover;
+    /* background-size:cover; */
 }
 
+.cardBack:hover{
+    box-shadow: 1px 2px 2px 2px rgb(134, 129, 129); 
+}
 /*---------------CARCATERÍSTICAS QUE AFECTAN LA POSICIÓN DE LAS TARJETAS---------------*/
 .cardBackPosition {
     position: relative;
@@ -204,6 +242,7 @@ main{
     object-fit: cover;
     max-width: 80px;
     text-align: left;
+    margin: 0 0 30px 0;
 }
 
 /*----elementos presentes en la parte trasera de la tarjeta----*/
@@ -271,9 +310,28 @@ main{
 
 .leyenda{
     font-size: 8px;
-    line-height: 60%;
+    line-height: 100%;
     text-transform: uppercase;    
 }
+
+.dateContainerCard{
+    display: flex;
+    justify-content: space-around;
+    justify-content: left;
+}
+
+.dateCardleft{
+    padding: 0 10px 0 0 ;
+    color: #FFFF;
+    font-size: 12px;
+}
+
+.dateCardright{
+    padding: 0 0 0 10px ;
+    color: #FFFF;
+    font-size: 12px;
+}
+
 
 /*------------Carcaterísticas de las letras de las tarjetas-------------*/
 .label{
@@ -295,29 +353,48 @@ main{
     text-align: right;
 }
 
-.containerDate{
+.dateContainer{
     display: flex;
+    justify-content: space-around;
 }
 
+.dateContainerleft{
+    width: 50%;
+    padding: 0 10px 0 0;
+}
+
+.dateContainerright{
+    width: 50%;
+    padding: 0 0px 0 10px;
+}
+
+.cvvContainer{
+    display: flex;
+    justify-content: left;
+    width: 50%;
+    padding: 0 10px 0 0;    
+}
 /*------------------------CARACTERÍSTICAS QUE AFECTAN AL FORMULARIO---------------------*/
 
-.boxForm {
+.boxForm {    
     z-index: 1;
     position: relative;
+    bottom: 150px;
     background: #FFFFFF;
-    width: 800px;    
+    width: 800px;  
+    height: 800px;  
     border-radius: 4px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     margin: 30px auto 100px;
     overflow: hidden;
-    box-shadow: 0 10px 10px 0px rgb(185, 182, 182);
-    
+    box-shadow: 0 10px 10px 0px rgb(185, 182, 182);    
 }
 
 .formPanel {   
     padding: 40px;
     box-sizing: border-box;
+    margin: 80px 0 80px 0;
 }
 
 .formHeader {
@@ -325,11 +402,13 @@ main{
 }
 
 .formHeader h1 {
+    display: flex;
     padding: 4px 0;
     color: #4285F4;
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
+    justify-content: center;
 }
 
 .formContent {
@@ -387,6 +466,8 @@ main{
 }
 
 .formGroup .bntForm {
+    display: flex;
+    justify-content: center;
     outline: none;    
     width: 100%;
     border: 0;
@@ -401,8 +482,18 @@ main{
     cursor: pointer;
 }
 
+.containerBntForm{
+    display: flex;
+    padding: 0 100px 0 100px;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 .formGroup #clean{
-    background-color: rgb(194, 79, 79);
+    background-color: rgb(194, 79, 79);    
     /* background-image: linear-gradient(rgb(194, 79, 79), rgb(224, 152, 152)); */
 }
 
@@ -419,6 +510,7 @@ main{
     background-color: rgb(16, 104, 16);  
     box-shadow: 1px 2px 2px 2px rgb(134, 129, 129);  
 }
+
 /*----------------CARACTERÍSTICAS QUE AFECTAN EL FOOTER------------------*/
 .footer{
     padding: 20px;

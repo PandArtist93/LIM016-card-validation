@@ -17,10 +17,11 @@
   
         </div>
         <ul class="menu">
-          <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">INICIO</a></li>
-          <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">ACCESORIOS</a></li>
-          <li><a href='#' style="font-size:30px; color:rgb(255, 255, 255)">AYUDA</a></li>
+          <li><a href="#" style="font-size:30px; color:rgb(255, 255, 255)">INICIO</a></li>
+          <li><a href="#" style="font-size:30px; color:rgb(255, 255, 255)">ACCESORIOS</a></li>
+          <li><a href="#" style="font-size:30px; color:rgb(255, 255, 255)">AYUDA</a></li>
           <li><i class="fa fa-search" style="font-size:40px"></i></li>
+          <!-- <li><input type="text" class= "search" id= "search" autocomplete="off"></li> -->
           <li><i class="fa fa-shopping-bag" style="font-size:40px; color:rgb(255, 255, 255)"></i></li>                  
         </ul>
         <div class="user">
@@ -32,10 +33,9 @@
     </header>    
 
     <main>
-      <!--- contenedor de tarjeta --->
-        <div class="boxCard">
+      <div class="gigantBox">
+        <div class="boxCard"><!--- contenedor de tarjeta --->
           <section class="card" id="card">
-  
               <div class="cardBackPosition">
                 <div class="cardBack"> <!-- esto es la parte trasera-->
                   <div class="contenidoCard2">
@@ -63,80 +63,85 @@
                   <div class="logoCard">
                     <img src="logo/visa.png" class="imagVisa">
                   </div>
-                  <img src="logo/chip.png" class="imagChip"><br>
+                  <img src="logo/chip.png" class="imagChip">
                   
                   <div class="contenidoCard1">
                     <div class="infCardFront"> 
-                      <p class="label">Número Tarjeta</p>
+                      <!-- <p class="label">Número Tarjeta</p> -->
                       <p class="infCard" id="numberCard" >**** **** **** **** </p>
                     </div>
                     <div class="dato">
-                      <p class="label">Nombre de la Tarjeta</p>
+                      <!-- <p class="label">Nombre de la Tarjeta</p> -->
                       <p class="infCard" id="nameCard">************ ************</p>
                     </div>
                     <div class="dato">
-                      <p class="label">Fecha de Vencimiento</p>
-                      <div clase= "flexbox">
-                        <div>
+                      <!-- <p class="label">Fecha de Vencimiento</p> -->
+                      <div class="dateContainerCard">
+                        <div class="dateCardleft"> 
+                          <label for="">Mes</label>
                           <p class="infCard" id="dateCardMonth">**</p>
                         </div>
-                        <div>
+                        <div class="dateCardright">
+                          <label for="">Año</label>
                           <p class="infCard" id="dateCardYear">**</p>
-                        </div>
-                      </div>                      
+                        </div>           
+                      </div>                        
                     </div>
                   </div>
-      
                 </div>
-              </div>                                        
+              </div>               
+                                                          
           </section>
         </div>
-
-        <!--- contenedor del Formulario--->
-        <div class="boxForm">
+        
+        <div class="boxForm"> <!--- contenedor del Formulario--->
           
           <div class="formPanel">
-            <div class="formHeader">
+            <div class="formHeader"> 
               <h1>Datos de la Tarjeta</h1><br>
             </div>
             <div class="formContent">
               <form action="" id="formToCard" class="formToCard" >
-                <div class="formGroup">
+                <div class="formGroup"> <!--- Nombre--->
                   <label for="nameForm">Nombre de la Tarjeta</label>
                   <input id="nameForm" type="text" name="nameForm" class="nameForm" maxlength="26" value="" autocomplete="off" required="required"/>
                 </div>
-                <div class="formGroup">
+                <div class="formGroup"> <!--- Número--->
                   <label for="numbForm">Número de la Tarjeta</label>
                   <input id="numbForm" type="text" name="numbForm" class="numbForm" maxlength="16" autocomplete="off" required="required"/>
                 </div>
-                <div class="formGroup">
-                  <label for="dateForm">Fecha de Vencimiento</label><br>
-                  <div>
-                    <label for="">Mes</label>
-                    <input id="dateFormMonth" type="text" name="dateForm" maxlength="2"class="dateForm" required="required"/>
-                  </div><br>
-                  <div>
-                    <label for="">Año</label>
-                    <input id="dateFormYear" type="text" name="dateForm" maxlength="4" class="dateForm" required="required"/>
-                  </div>                  
+                <div class="formGroup"> <!--- fecha de vencimiento--->
+                  <label for="dateForm">Fecha de Vencimiento</label>
+                  <div class="dateContainer">
+                    <div class="dateContainerleft"> 
+                      <label for="">Mes</label>
+                      <input id="dateFormMonth" type="text" name="dateForm" maxlength="2" class="dateFormMonth" required="required"/>
+                    </div>
+                    <div class="dateContainerright">
+                      <label for="">Año</label>
+                      <input id="dateFormYear" type="text" name="dateForm" maxlength="4" class="dateFormYear" required="required"/>
+                    </div>           
+                  </div>                              
                 </div>
-                <div class="formGroup">
+                <div class="formGroup"> <!--- CVV--->
                   <label for="codeCvvForm">Código de Verificación</label>
-                  <input id="codeCvvForm" type="text" name="codeCvvForm" maxlength="3" required="required"/>
-                </div>
-                
-                <div class="formGroup">
-                  <br><button type="submit" class="bntForm" id="clean">Limpiar todos los campos</button>
-                </div>
-                <div class="formGroup">
-                  <br><button type="submit" class="bntForm" id="validateBtn">Validar Pago</button>
-                </div>
+                  <div class="cvvContainer">                    
+                    <input id="codeCvvForm" type="text" name="codeCvvForm" maxlength="3" required="required"/>
+                  </div>                  
+                </div>                
+                <div class="formGroup"> <!--- Botones--->
+                  <div class="containerBntForm">
+                    <button type="submit" class="bntForm" id="clean">Limpiar todos los campos</button><br>
+                    <button type="submit" class="bntForm" id="validateBtn">Validar Tarjeta</button>
+                  </div>                                  
+                </div>                
               </form>
             </div>
           </div>
         </div>        
 
-      </main>
+      </div>             
+    </main>
 
     <footer class="footer">
       <p>Privacy Policy | Cookie Policy | Do Not Sell My Personal Information | Terms</p>
