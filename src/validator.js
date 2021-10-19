@@ -1,9 +1,9 @@
 const validator = {
   isValid: function(creditCardNumber){
-    console.log(creditCardNumber);
+    //console.log(creditCardNumber);
     let validationDigit = creditCardNumber[creditCardNumber.length -1]
     let realCreditCardNumber = creditCardNumber.substr(0, creditCardNumber.length - 1);
-    console.log(realCreditCardNumber);
+    //console.log(realCreditCardNumber);
     let cardNumbInt = newArrayNumb(realCreditCardNumber);
     for (let i = 0; i < cardNumbInt.length; i = i+2){
       cardNumbInt[i] = cardNumbInt[i] * 2;
@@ -14,15 +14,8 @@ const validator = {
       }      
     }
     let sumTotal = sumNumbArray(cardNumbInt);
-    console.log(sumTotal);
-
-    /* if (sumTotal != 0 && sumTotal % 10 == 0){
-      return true
-    }
-    else{
-      return false
-    } */
-
+    //console.log(sumTotal);
+   
     if (sumTotal != 0){
       if (validationDigit == 10 - (sumTotal % 10)){
         
@@ -52,7 +45,7 @@ const validator = {
   }
 };
 
-
+//función que se encarga de convertir el número de la tarjeta del tipo string en un arreglo de int
 function newArrayNumb(stringCardNumb){
   
   let numbArray = [];
@@ -62,6 +55,7 @@ function newArrayNumb(stringCardNumb){
   return numbArray 
 }
 
+//función que se encarga de realizar la suma de todos los digitos de la tarjeta durante el algoritmo de luhn
 function sumNumbArray (numbArray){
   let sumNumb = 0;
   for (let i = 0; i < numbArray.length; i++){
@@ -69,6 +63,16 @@ function sumNumbArray (numbArray){
   }  
   return sumNumb
 }
+
+//función que se encarga de separar los digitos de la tarjeta de credito cada cuatro elementos
+/* function separateNumbInGroupTo4 (stringCardNumb){  
+  let transform = "";
+  for(let i = 0; i < stringCardNumb.length; i += 4){
+    transform.push(stringCardNumb.substr(i, 4));
+    console.log(transform.join(' '));
+  }
+  return transform
+} */
 
 export default validator;
 

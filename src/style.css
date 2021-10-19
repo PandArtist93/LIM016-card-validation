@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 
-/*-------------------CARACTERÍSTACAS QUE AFECTAN A TODO EL BODY----------------*/
- 
+/*-------------------CARACTERÍSTACAS QUE AFECTAN A TODO EL BODY----------------*/ 
 body {
     background: linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%);
     color: rgba(0, 0, 0, 0.6);
@@ -15,80 +14,71 @@ body {
 }
 
 /*--------------------CARACTERÍSTICAS DEL HEADER----------------------*/
-
-a:link,
-a:visited {
-  color: #5D6063;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
 .header {
   position: static;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 220px;
   padding: 50px;
-  background: rgb(33, 182, 241);
+  background: #5bb9eb;
   font-size: 20px;
   font-weight: bold 700;
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
+.imagLogo1{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* max-width: 150px; */
+    /* text-align: left; */ 
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
 .menu{
     justify-content: space-between;
     width: 750px;
-}
-
-/* .search{
-    text-transform: uppercase;
-    display: flex;
-    background: rgba(0, 0, 0, 0.1);
-    width: 20%;
-    border: 0;
-    border-radius: 4px;
-    box-sizing: border-box;
-    padding: 12px 20px;
-    color: rgba(0, 0, 0, 0.6);
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: 500;
-    line-height: inherit;
-    transition: 0.3s ease;
-    
-}
- */
-.menu {
     margin-top: 15px;
 }
-  
-.menu > li {
-    display: inline;
-    margin-right: 50px;
+
+.menu .logo {
+    margin: 0 0 0 15px;
+    width: 700px;
+    height: 105px;     
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.user{
+    width: 100px;
+    height: 100px;
 }
 
 .logo .user{
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;    
     font: 20px;
     line-height: 20px;
     color: blanchedalmond;
 }
 
 .user button{
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     border-style:none;
     background: rgb(39, 151, 196);    
     border: 0;
-    border-radius: 36px;
+    border-radius: 40px;
     padding: 0 20px 3px 20px;
     color: #FFFFFF;
     cursor: pointer;
-    position: static;
+    position: relative;
+    top: 25px;
 }
 
 .user button:hover{
@@ -96,25 +86,48 @@ a:hover {
 }
 
 .logo{
-    width: 100px;
-    height: 100px;
-    position: static;
+    width: 150px; 
+    height: 150px;
+    
 }
-/*-----------------caracaterísticas que afectan al main------------------*/
 
-main{
+/* ----------estilos de la tabla que contiene los links------------ */
+.nav{
+    display: flex;
+    position: relative;
+    z-index: 5;
+}
+
+.navBar{
+    background-color: rgb(51, 64, 179);
+    color: white;
+    float: left;
+    border: 1px solid rgb(152, 155, 184);
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+    height:70px;
+    font-size: 25px;
+}
+  
+.nav button:hover {    
+    background-color: rgb(13, 188, 231);    
+}
+
+/*-----------------caracaterísticas que afectan al main------------------*/
+.main{
     /* background: linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%); */
     height: 100%;
 }
 
 /*------------CARACTERÍSTICAS QUE AFECTAN TARJETAS Y FORMULARIO---------------*/
-
 .gigantBox{
     position: relative;
 }
 
 /*------------CARACTERÍSTICAS QUE AFECTAN SOLO A LAS TARJETAS---------------*/
-
 .boxCard{    
     width: 1000px;
     max-width: 900px;
@@ -128,7 +141,6 @@ main{
 }
 
 /*-------------ESTILO DE TRASERO Y DELANTERO DE LA TARJETA----------------*/
-
 .card{
     width: 800;
     max-width: 500px;
@@ -149,10 +161,7 @@ main{
     box-shadow: 0 10px 10px 0 rgb(134, 129, 129);
     width: 100%;
     text-transform: uppercase;
-    background-image: linear-gradient(rgb(9, 7, 121), rgb(90, 82, 202));
-    /* background: rgb(230, 169, 78); */
-    /* background: url(https://github.com/falconmasters/formulario-tarjeta-credito-3d/blob/master/img/bg-tarjeta/bg-tarjeta-02.jpg?raw=true); */
-    /* background-size:cover; */
+    background-image: linear-gradient(rgb(9, 7, 121), rgb(90, 82, 202));   
 }
 
 .cardFront:hover{
@@ -168,10 +177,7 @@ main{
     flex-direction: column;
     justify-content: space-around;
     box-shadow: 0 10px 10px 0 rgb(134, 129, 129);
-    background-image: linear-gradient(rgb(117, 78, 189), rgb(78, 161, 238));
-    /* background: rgb(209, 93, 47); */
-    /* background: url(https://github.com/falconmasters/formulario-tarjeta-credito-3d/blob/master/img/bg-tarjeta/bg-tarjeta-02.jpg?raw=true); */
-    /* background-size:cover; */
+    background-image: linear-gradient(rgb(117, 78, 189), rgb(78, 161, 238));    
 }
 
 .cardBack:hover{
@@ -199,19 +205,19 @@ main{
     border: 10px 0 0 0;
     font-size: relative;
     justify-content: right;
+    letter-spacing: 2px;
 }
 
 .contenidoCard1{
     margin: 5px;
+    letter-spacing: 2px;
 }
 
 .contenidoCard2{ 
-    height: 250px;
-    
+    height: 250px;     
 }
 
 /*------------Imagenes y logos de las tarjetas------------*/
-
 .card > div {
     padding: 30px;
     border-radius: 15px;
@@ -220,7 +226,6 @@ main{
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 10 10px 0 rgba(90, 116, 148, 0.3);
-
 }
 
 .logoCard {
@@ -276,8 +281,7 @@ main{
 .cvvPosition{
     display: inline;
     justify-content: right;
-    display: flex;
-    
+    display: flex;    
 }
 
 .cvvCard{
@@ -289,8 +293,7 @@ main{
 .boxCvv{
     color: azure;
     justify-content: right;  
-    font-size: 18px;  
-    
+    font-size: 18px;      
 }
 
 .cvvPosition .boxCvv{
@@ -331,7 +334,6 @@ main{
     color: #FFFF;
     font-size: 12px;
 }
-
 
 /*------------Carcaterísticas de las letras de las tarjetas-------------*/
 .label{
@@ -374,8 +376,7 @@ main{
     width: 50%;
     padding: 0 10px 0 0;    
 }
-/*------------------------CARACTERÍSTICAS QUE AFECTAN AL FORMULARIO---------------------*/
-
+/*------------------------CARACTERÍSTICAS QUE AFECTAN AL FORMULARIO-----------------------*/
 .boxForm {    
     z-index: 1;
     position: relative;
@@ -414,7 +415,6 @@ main{
 .formContent {
     height: auto;
 } 
-
 
 .formGroup {
     display: flexbox; 
@@ -527,5 +527,4 @@ main{
     flex-direction: column;    
 }
 
-/*-----------------------------------------------------------*/
-  
+/*------------------------------------------------------------------*/

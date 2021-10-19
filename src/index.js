@@ -68,6 +68,8 @@ function updateCardYear(event){
 let inputCardYear = document.getElementById("dateFormYear");
 inputCardYear.addEventListener("input", updateCardYear);
 
+/*------función que se encarga de validar el número de la tarjeta inportando el método inValid------*/
+
 function validaterCardNumb(event){
     //console.log(event);
     event.preventDefault();
@@ -91,6 +93,8 @@ function validaterCardNumb(event){
 
 let validateCardBtn = document.getElementById("validateBtn");
 validateCardBtn.addEventListener("click", validaterCardNumb);
+
+/*----------------------------------------------------------*/
 
 
 
