@@ -6,7 +6,13 @@
 
 /*-------------------CARACTERÍSTACAS QUE AFECTAN A TODO EL BODY----------------*/ 
 body {
-    background: linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%);
+    /*background: linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%);*/
+    background-image: url("fondos/fonfo1.PNG");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position-x:center;
+    background-position-y:center;
+    background-size: 210rem;
     color: rgba(0, 0, 0, 0.6);
     font-family: "Roboto", sans-serif;
     font-size: 14px;
@@ -99,7 +105,7 @@ body {
 }
 
 .navBar{
-    background-color: rgb(51, 64, 179);
+    background-color: rgb(50, 63, 184);
     color: white;
     float: left;
     border: 1px solid rgb(152, 155, 184);
@@ -161,7 +167,7 @@ body {
     box-shadow: 0 10px 10px 0 rgb(134, 129, 129);
     width: 100%;
     text-transform: uppercase;
-    background-image: linear-gradient(rgb(9, 7, 121), rgb(90, 82, 202));   
+    background-image: linear-gradient(rgb(9, 7, 121), rgb(103, 95, 204));   
 }
 
 .cardFront:hover{
@@ -239,6 +245,8 @@ body {
     object-fit: cover;
     max-width: 100px;
     text-align: right;
+    border: 0;
+    border-radius: 10px;
 }
 
 .imagChip {
@@ -248,6 +256,8 @@ body {
     max-width: 80px;
     text-align: left;
     margin: 0 0 30px 0;
+    border: 0;
+    border-radius: 10px;
 }
 
 /*----elementos presentes en la parte trasera de la tarjeta----*/
@@ -515,8 +525,8 @@ body {
 .footer{
     padding: 20px;
     width: auto;
-    height: 150px;
-    background: rgb(33, 182, 241);
+    height: 220px;
+    background: #5bb9eb;
     justify-content: center;
     align-items: center;
     display: flex;

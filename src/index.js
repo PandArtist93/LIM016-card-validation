@@ -6,7 +6,7 @@ import validator from './validator.js';
 /*---------función que se encarga de limpiar los campos del formulario------------*/
 
 function cleanFormFields() {
-    alert("¿estas seguro de que deseas borrar todo?");
+    //alert("¿estas seguro de que deseas borrar todo?");
         
 }
 
@@ -95,6 +95,11 @@ let validateCardBtn = document.getElementById("validateBtn");
 validateCardBtn.addEventListener("click", validaterCardNumb);
 
 /*----------------------------------------------------------*/
-
-
+/* 
+for(let i = 1; i <= 12; i++){
+    let opcion = document.createElement("option");
+    opcion.value = i;
+    opcion.innerText = i;
+    formGroup.selecMonth.appendChild(opcion);
+} */
 

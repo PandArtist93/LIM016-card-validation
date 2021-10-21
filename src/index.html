@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <body>    
@@ -128,12 +129,22 @@
                   <label for="dateForm">Fecha de Vencimiento</label>
                   <div class="dateContainer">
                     <div class="dateContainerleft"> 
-                      <label for="">Mes</label>
+                      <label for="">Mes</label>                      
                       <input id="dateFormMonth" type="text" name="dateForm" maxlength="2" class="dateFormMonth" required="required"/>
+                      <!--
+                      <select name="month" id="selecMonth">                        
+                        <option disabled selected>MES</option>
+                      </select>
+                      -->
                     </div>
                     <div class="dateContainerright">
-                      <label for="">Año</label>
+                      <label for="">Año</label>                      
                       <input id="dateFormYear" type="text" name="dateForm" maxlength="4" class="dateFormYear" required="required"/>
+                      <!--  
+                      <select name="year" id="selecYear">
+                        <option disabled selected>AÑO</option>
+                      </select>  
+                      -->                    
                     </div>           
                   </div>                              
                 </div>
